@@ -1,0 +1,458 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+    font-family: 'Brevia';
+    src: local('Brevia Light'), local('Brevia-Light'),
+        url('Brevia-Light.woff2') format('woff2'),
+        url('Brevia-Light.woff') format('woff'),
+        url('Brevia-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }
+
+:root {
+    --color-base: #333;
+    --color-secondary: #d50032;
+    --color-extra: #d4e9e2;
+}
+
+html {
+    height: 100%;
+}
+
+html body {
+    font-family: "Brevia","Open Sans", sans-serif;
+    line-height: 1.4;
+    color: #333;
+}
+
+.col {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+    padding-inline-start: 0 !important;
+}
+
+img {
+    max-width: 100%;
+}
+
+p {
+    margin: 5px 0;
+}
+
+.container {
+    align-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+header .navbar-left, .navbar-right {
+    display: flex;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    position: relative;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.navbar {
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.navbar a {
+    color: #84929f;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.navbar p {
+    color: #84929f;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .navbar-nav-right li {
+    margin: 0 15px;
+}
+
+#logo-phone {
+    display: none;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 100%;
+    padding: 30px;
+    background-color: #fafafa;
+    transition: all 0.3s;
+    z-index: 10000;
+}
+
+.mobile-menu ul {
+    line-height: 3;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.mobile-menu a {
+    color: #84929f;
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    font-size: 20px;
+}
+
+.mobile-menu ul a {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.hidden {
+    transform: translateX(-100%);
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.mobile-menu a:hover {
+    color: var(--color-primary);
+}
+
+/* Hamburger */
+.hamburger-container {
+    height: 100%;
+    position: absolute;
+    right: 12px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    visibility: hidden;
+}
+
+.hamburger {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    background: none;
+    border: none;
+    z-index: 10;
+    transition: all 0.25s;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 26px;
+    height: 1.2px;
+    background-color: #84929f;
+    transform: rotate(0);
+    transition: all 0.5s;
+}
+
+.hamburger-middle {
+    transform: translateY(7px);
+}
+
+.hamburger-bottom {
+    transform: translateY(14px);
+}
+
+.open .hamburger-top {
+    transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+.open .hamburger-middle {
+    display: none;
+}
+.open .hamburger-bottom {
+    transform: rotate(-45deg) translateY(6px) translateX(-6px);
+}
+
+@media(max-width: 920px) {
+
+    #header {
+        display: fixed;
+        height: 120px;
+        background-color: #f8f6f6;
+    }
+
+    header .navbar-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f8f6f6;
+    }
+
+    #logo-phone {
+        display: block;
+    }
+
+    .navbar .navbar-nav-left,
+    .navbar .navbar-nav-right {
+        display: none;
+    }
+
+    .hamburger-container {
+        visibility: visible;
+    }
+}
+
+
+
+/* Footer */
+footer {
+    width: 100%;
+    padding-top: 18px;
+    padding-bottom: 80px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+footer .nav-links {
+    width: 100%;
+}
+
+footer .links {
+    width: 100%;
+    margin-left: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+footer .links li{
+    margin-right: 12px;
+}
+
+footer .links li:last-child{
+    margin-right: 0;
+}
+
+footer .links li a{
+    font-family: 'Rubic', sans-serif;
+    font-weight: 400;
+    color: #84929f;
+}
+
+footer .pic-links {
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+footer .other-inf {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer .other-inf .about{
+    font-size: 12px;
+    width:160px;
+}
+
+footer .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 12px;
+}
+
+footer .grid-about {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+}
+
+footer .image-container {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+
+@media(max-width: 920px) {
+
+    footer .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    footer .grid-about {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* -------------------------------------------------------------------------------------------- */
+
+main .img-switcher {
+    width: 100%;
+    height: 360px;
+    margin-top: 12px;
+    background-image: url("img2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.2s;
+
+    display: none;
+    
+
+
+}
+
+main .banner {
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("img3.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+main .banner::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 100;
+}
+
+main .banner p {
+    max-width: 400px;
+    z-index: 1000;
+    position: relative;
+}
+
+main .banner h2 {
+    z-index: 1000;
+    position: relative;
+}
+
+main .section-form {
+    margin-top: 40px;
+    margin-bottom: 80px;
+}
+
+.container-form {
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+main .section-form label {
+    font-weight: 600;
+}
+
+main .section-form input {
+    border: none;
+    border-bottom: 1px solid #222;
+    border-radius: 0%;
+    font-size: 10px;
+}
+
+main .section-form input:focus {
+    background-color: none !important;
+    border: none !important;
+    outline: none !important;
+    padding: none !important;
+}
+
+main .section-form .form-field {
+    margin-top: 12px;
+}
+
+@keyframes slide {
+    0%{background-image: url(img4.jpg);}
+    25%{background-image: url(img5.jpg);}
+    50%{background-image: url(img6.jpg);}
+    75%{background-image: url(img8.jpg);}
+    100%{background-image: url(img9.jpg);}
+}
+
+.checkbox-wrapper-61 input[type="checkbox"] {
+    visibility: hidden;
+    display: none;
+  }
+
+  .checkbox-wrapper-61 *,
+  .checkbox-wrapper-61 ::after,
+  .checkbox-wrapper-61 ::before {
+    box-sizing: border-box;
+  }
+
+  .checkbox-wrapper-61 {
+    position: relative;
+    display: block;
+    overflow: hidden;
+  }
+  .checkbox-wrapper-61 .check {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    opacity: 0;
+  }
+  .checkbox-wrapper-61 .label svg {
+    vertical-align: middle;
+  }
+  .checkbox-wrapper-61 .path1 {
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+    transition: .5s stroke-dashoffset;
+    opacity: 0;
+  }
+  .checkbox-wrapper-61 .check:checked + label svg g path {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
